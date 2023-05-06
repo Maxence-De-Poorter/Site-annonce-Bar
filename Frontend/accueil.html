@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/accueil.css">
+    <script src="./cours.js"></script>
     <title>Proxi'Bar</title>
 </head>
 <body>
@@ -29,30 +30,38 @@
   <div class="titre">
     <h1>Proxi'Bar</h1>
     <p>Le site qui vous permet de trouver le bar qui vous correspond</p>
+    <input type="button" onclick="let tmp = Math.random() * 360;
+    let temp = Math.random() * 360;
+    //on appelle la fonction coordonneesV2
+    navigator.geolocation.getCurrentPosition(function (pos) {
+        coordonneesV2(pos, tmp, temp);
+    }
+    );">
+
   </div>
 
   <div class="proche">
     <h2>Les bars proches de chez vous</h2>
     <div class="annonce">
       <div class="test">
-        <img src="PDD.jpg">
-        <h3>Titre du bar</h3>
-        <p>Adresse du bar</p>
-        <p>Note</p>
+        <img id="i1">
+        <h3 id="p1"></h3>
+        <p id="a1"></p>
+        <p id="d1"></p>
       </div>
     
       <div class="test">
-        <img>
-        <h3>Titre du bar</h3>
-        <p>Adresse du bar</p>
-        <p>Note</p>
+        <img id="i2">
+        <h3 id="p2"></h3>
+        <p id="a2"></p>
+        <p id="d2"></p>
       </div>
 
       <div class="test">
-        <img>
-        <h3>Titre du bar</h3>
-        <p>Adresse du bar</p>
-        <p>Note</p>
+        <img id="i3">
+        <h3 id="p3"></h3>
+        <p id="a3"></p>
+        <p id="d3"></p>
       </div>
     </div>
   </div>
@@ -65,4 +74,4 @@
     <h3>PROXI'BAR - 2023</h3>
   </footer>
 </body>
-</html>
+</html

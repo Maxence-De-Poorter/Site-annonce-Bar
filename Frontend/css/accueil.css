@@ -129,9 +129,13 @@ nav {
 
 .proche .annonce .test img{
     background-color: #E5D9F2;
-    width: 100%;
+    width: auto;
     height: 200px;
     border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top:10px;
 }
 
 .proche .annonce .test h3{
