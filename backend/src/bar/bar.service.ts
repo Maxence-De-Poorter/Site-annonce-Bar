@@ -4,7 +4,7 @@ import { Injectable } from '@nestjs/common';
 export class BarService {
 
     //Constructeur
-    constructor() { }
+    constructor( ) { }
 
     //Liste de 3 bars
     bars = [
@@ -37,4 +37,32 @@ export class BarService {
             longitude: 3.054603
         }
     ]; 
+
+    //Fonction qui renvoie les bars les plus proches en fonction de la position de l'utilisateur
+    async getNearestBars(latitude: number, longitude: number): Promise<any> {
+        //On récupère la liste des bars
+        let bars = this.bars;
+
+        //On crée une liste vide qui contiendra les bars les plus proches
+        let nearestBars = [];
+
+        //On parcourt la liste des bars
+        for (let i = 0; i < bars.length; i++) {
+            //On calcule la distance entre le bar et l'utilisateur
+            let distance = Math.sqrt(Math.pow(latitude - bars[i].latitude, 2) + Math.pow(longitude - bars[i].longitude, 2));
+            //On ajoute le bar à la liste des bars les plus proches avec la distance si la distance est inférieure à 1km
+            if (distance < 1000) {
+                nearestBars.push({ bar: bars[i], distance: distance });
+            }
+        }
+
+        //On trie les bars par distance
+        nearestBars.sort(function (a, b) {
+            return a.distance - b.distance;
+        }
+        );
+ 
+        //On renvoie la liste des bars les plus proches
+        return nearestBars;
+    }
 }

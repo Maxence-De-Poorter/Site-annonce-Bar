@@ -1,0 +1,234 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+/**********************NAV BAR**********************/
+nav {
+    background-color: #A594F9;
+    height: 70px;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.navLeft{
+    float: left;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.navLeft a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.navLeft a:hover{
+    color: #7371FC;
+}
+
+.navCenter{
+    float: left;    
+    width: 34%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navCenter a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.navRight{
+    float: right;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.navRight a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.navRight a:hover{
+    color: #7371FC;
+}
+/********************** NAV BAR **********************/
+
+/********************** CONTENT **********************/
+.topContent h1{
+    height: 50px;
+    font-size: 50px;
+    color: #A594F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar input{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #A594F9;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.searchBar button{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #A594F9;
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: #A594F9;
+    color: white;
+}
+
+.topContent h2 {
+    font-size: 20px;
+    color: #A594F9;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchOption{
+    width: 100%;
+    height: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sortOption{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #A594F9;
+    font-size: 20px;
+    background-color: #A594F9;
+    color: white;
+}
+
+#bars{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#A594F9;
+}
+
+.bar{
+    width: 100%;
+    height: 400px;
+    border: 1px solid #A594F9;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    border:1px solid white;
+}
+
+.bar img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.bar a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.bar p{
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+
+#pagination{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pagination button{
+    width: 150px;
+    height: 50px;
+    border-radius: 10%;
+    border: 1px solid #A594F9;
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: #A594F9;
+    color: white;
+}
+
+#pagination button:hover{
+    background-color: white;
+    color: #A594F9;
+}
+
+
+/********************** FOOTER **********************/
+footer {
+    background-color: #A594F9;
+    height: 100px;
+    width: 100%;
+    z-index: 100;
+    position : relative;
+    margin: 0;
+    bottom: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+footer h3{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+    padding-top: 20px;
+}
+/********************** FOOTER **********************/
