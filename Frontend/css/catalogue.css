@@ -11,7 +11,7 @@ body {
 
 /**********************NAV BAR**********************/
 nav {
-    background-color: #A594F9;
+    background-color: #8971fd;
     height: 70px;
     width: 100%;
     z-index: 100;
@@ -149,7 +149,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#A594F9;
+    background-color:#8971fd;
 }
 
 .bar{
@@ -214,11 +214,11 @@ nav {
 
 /********************** FOOTER **********************/
 footer {
-    background-color: #A594F9;
+    background-color: #a08dff;
     height: 100px;
     width: 100%;
     z-index: 100;
-    position : relative;
+    position : absolute;
     margin: 0;
     bottom: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
