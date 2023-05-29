@@ -25,13 +25,31 @@ export class ScrappingController {
         return this.service.getAll(latitude, longitude, page, resultsPerPage, sortBy);
     }
 
-    @Post('get')
-    get(
-        @Body('latitude') latitude: number ,
-        @Body('longitude') longitude: number
+    @Post('search')
+    search(
+        @Body('barName') barName: string
         ): Promise<Scrapping[]> {
-        return this.service.get(latitude, longitude);
+        return this.service.search(barName);
     }
+
+    @Post('boisson')
+    getBoisson(
+        @Body('latitude') latitude: number ,
+        @Body('longitude') longitude: number,
+        @Body('page') page: number,
+        @Body('resultsPerPage') resultsPerPage: number,
+        @Body('sortBy') sortBy: string,
+        @Body('boisson') boisson: string
+        ): Promise<Scrapping[]> {
+        return this.service.getBoisson(latitude, longitude, page, resultsPerPage, sortBy, boisson);
+    }
+
+    @Get('all')
+    getAll2(): Promise<Scrapping[]> {
+        return this.service.getAll2();
+    }
+
+
 
     //Fonction qui renvoi les bars les plus proches
     @Post('nearest')
@@ -42,10 +60,20 @@ export class ScrappingController {
         return this.service.getNearestBars(latitude, longitude);
     }
 
-    @Post('search')
-    search(
-        @Body('barName') barName: string
+    @Post('getBoisson')
+    getBoisson2(
+        @Body('latitude') latitude: string,
+        @Body('longitude') longitude: string,
+        @Body('boisson') boisson: string
         ): Promise<Scrapping[]> {
-        return this.service.search(barName);
+        return this.service.getBoisson2(latitude, longitude, boisson);
+    }
+
+    @Post('getBars')
+    get(
+        @Body('latitude') latitude: number ,
+        @Body('longitude') longitude: number
+        ): Promise<Scrapping[]> {
+        return this.service.get(latitude, longitude);
     }
 }

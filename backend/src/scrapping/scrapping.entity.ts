@@ -29,4 +29,7 @@ export class Scrapping {
 
     @Column('decimal', { precision: 7, scale: 15, nullable: true })
     longitude: number
+
+    @Column()
+    carte: string;
 } 

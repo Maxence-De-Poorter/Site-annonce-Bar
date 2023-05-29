@@ -10,3 +10,4 @@ import { Scrapping } from './scrapping.entity';
   providers: [ScrappingService]
 })
 export class ScrappingModule {}
+ 
